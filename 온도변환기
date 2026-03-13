@@ -16,13 +16,13 @@ celsius.grid(row = 1, column = 0)
 
 #화씨,섭씨 입력창
 fahrenheit_input = tkinter.Entry(window)
-#ahrenheit_input.bind("<Return>",fahrenheit_function)
+#fahrenheit_input.bind("<Return>",fahrenheit_function)
 
 celsius_input = tkinter.Entry(window)
 #celsius_input.bind("<Return>",celsius_function)
 
-#화씨,섭씨 입력창 위치
-fahrenheit.grid(row = 0, column = 2)
-celsius.grid(row = 1, column = 2)
+#화씨,섭씨
+fahrenheit_input.grid(row = 0, column = 2)
+celsius_input.grid(row = 1, column = 2)
 
 window.mainloop()
