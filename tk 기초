@@ -1,0 +1,42 @@
+import tkinter
+window = tkinter.Tk()
+window.title('s')
+window.geometry("640x400+100+100")
+window.resizable(False,False)
+
+
+count = 0
+def countUP():
+    global count
+    count += 1
+    lable1.config(text = str(count))
+
+def calc(event):
+    lable1.config(text = "결과="+str(eval(entry.get())))
+
+def close():
+    window.quit()
+    window.destroy()
+
+lable1 = tkinter.Label(window,text = 'D',width = '15', height = "15")
+lable1.pack()
+
+button = tkinter.Button(window,text = 'a', command = countUP,repeatdelay= 1000,repeatinterval= 100, background= 'blue')
+button.pack()
+
+entry = tkinter.Entry(window)
+entry.bind("<Return>",calc)
+entry.pack()
+
+menubar = tkinter.Menu(window)
+menu_1 = tkinter.Menu(menubar, tearoff= 0)
+menu_1.add_command(label = "하위메뉴")
+menu_1.add_separator()
+menu_1.add_checkbutton(label= "체크박스")
+menu_1.add_radiobutton(label= "라디오버튼", state = "disable" )
+menubar.add_cascade(label = "상위메뉴", menu= menu_1)
+window.config(menu=menubar)
+
+menu_1.add_command(label= "하위메뉴", command= close)
+
+window.mainloop()
