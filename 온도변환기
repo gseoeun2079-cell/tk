@@ -1,0 +1,28 @@
+import tkinter
+window = tkinter.Tk()
+
+window.title('온도 변환기')
+
+window.geometry()
+window.resizable(False,False)
+
+#화씨,섭씨 이름
+fahrenheit = tkinter.Label(window,text = "화씨")
+celsius = tkinter.Label(window,text = "섭씨")
+
+#화씨,섭씨 위치
+fahrenheit.grid(row = 0, column = 0)
+celsius.grid(row = 1, column = 0)
+
+#화씨,섭씨 입력창
+fahrenheit_input = tkinter.Entry(window)
+#ahrenheit_input.bind("<Return>",fahrenheit_function)
+
+celsius_input = tkinter.Entry(window)
+#celsius_input.bind("<Return>",celsius_function)
+
+#화씨,섭씨 입력창 위치
+fahrenheit.grid(row = 0, column = 2)
+celsius.grid(row = 1, column = 2)
+
+window.mainloop()
