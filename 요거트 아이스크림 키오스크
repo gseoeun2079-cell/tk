@@ -1,0 +1,7 @@
+import tkinter
+window = tkinter.Tk()
+window.title('요거트 아이스크림 키오스크')
+window.geometry("500x650+400+0")
+window.resizable(False,False)
+
+window.mainloop()
