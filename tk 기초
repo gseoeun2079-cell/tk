@@ -18,16 +18,20 @@ def close():
     window.quit()
     window.destroy()
 
+#텍스트박스
 lable1 = tkinter.Label(window,text = 'D',width = '15', height = "15")
 lable1.pack()
 
+#버튼
 button = tkinter.Button(window,text = 'a', command = countUP,repeatdelay= 1000,repeatinterval= 100, background= 'blue')
 button.pack()
 
+#사용자 입력창
 entry = tkinter.Entry(window)
 entry.bind("<Return>",calc)
 entry.pack()
 
+#메뉴
 menubar = tkinter.Menu(window)
 menu_1 = tkinter.Menu(menubar, tearoff= 0)
 menu_1.add_command(label = "하위메뉴")
@@ -39,4 +43,25 @@ window.config(menu=menubar)
 
 menu_1.add_command(label= "하위메뉴", command= close)
 
+#이미지
+#img = tkinter.PhotoImage(file = "이미지.jpg")
+#img_label = tkinter.Label(window, image = img)
+#img_label.pack()
+
+#메세지박스(종류 여러가지)
+from tkinter import messagebox
+messagebox.showinfo("메세지박스", "메세지박스")
+
+#심플다이얼로그(메세지창에서 입력)
+from tkinter import *
+import tkinter.simpledialog
+mainFrame = Tk()
+
+result1 = tkinter.simpledialog.askstring("제목", "이름을 입력하세요")
+print(result1, type(result1))
+
+result2 = tkinter.simpledialog.askinteger("제목", "나이를 입력하세요")
+print(result2, type(result2))
+
+#mainloop
 window.mainloop()
