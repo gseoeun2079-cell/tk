@@ -65,3 +65,8 @@ print(result2, type(result2))
 
 #mainloop
 window.mainloop()
+
+#위젯배치
+1.pack
+2.grid(행렬)
+3.place
