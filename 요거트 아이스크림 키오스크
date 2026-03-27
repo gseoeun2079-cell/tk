@@ -1,7 +1,43 @@
 import tkinter
-window = tkinter.Tk()
-window.title('요거트 아이스크림 키오스크')
-window.geometry("500x650+400+0")
-window.resizable(False,False)
+window1 = tkinter.Tk()
+window1.title('요거트 아이스크림 키오스크')
+window1.geometry("500x790+515+0")
+window1.resizable(False,False)
 
-window.mainloop()
+#order_window2
+def order_window2():
+    window2 = tkinter.Toplevel(window1)
+    window2.title("요거트 아이스크림 키오스크")
+    window2.geometry("500x790+515+0")
+    window2.resizable(False,False)
+    #텍스트 박스
+    window2_label = tkinter.Label(window2, text = '요거트 아이스크림', width = '20', height = "4")
+    window2_label.place(x = 165, y = 10)
+    #딸기 아이스크림 이미지
+    img_strawberry_icecream = tkinter.PhotoImage(file = "img\strawberry_icecream.png")
+    img_strawberry_icecream_label = tkinter.Label(window2, image = img_strawberry_icecream)
+    img_strawberry_icecream_label.place(x = 50, y = 50)
+    window2.mainloop()
+    #딸기 아이스크림 텍스트
+    window2_label = tkinter.Label(window2, text = '딸기 아이스크림', width = '20', height = "4")
+    window2_label.place(x = 10, y = 50)
+    #
+
+#window1 이미지
+img_icecream = tkinter.PhotoImage(file="img\icecream.png")
+img_icecream_label = tkinter.Label(window1, image = img_icecream)
+img_icecream_label.place(x = 0, y = 0, bordermode="inside")
+
+#window1 텍스트
+#window1_label = tkinter.Label(window1, text = '요거트 아이스크림', width = '20', height = "4")
+#window1_label.place(x = 165, y = 300)
+
+#window1 버튼
+order_button = tkinter.Button(window1,text = '주문하러 가기', command = order_window2, width = 20, height = 4, borderwidth = 0, background= 'pink')
+order_button.place(x = 165, y = 690)
+
+#window1 mainloop
+window1.mainloop()
+
+#window1 삭제(window2가 생성되었을 때), 텍스트 사용, 텍스트 폰트 크기
+#window2 요거트 아이스크림(딸기,블루베리,초코,바닐라,망고,민트)
